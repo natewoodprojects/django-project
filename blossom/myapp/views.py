@@ -15,3 +15,6 @@ def book_by_id(request, book_id):
 
 def plants_homepage(request):
     return render(request, 'plants.html')
+
+def create_plant(request):
+    return render(request, 'new_plant.html')
