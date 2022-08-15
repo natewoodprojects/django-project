@@ -7,7 +7,7 @@ from .models import Book
 
 
 def index(request):
-    return HttpResponse('<a href="http://127.0.0.1:8000/book/1">This should be a book</a>')
+    return render(request, 'plants.html')
 
 def book_by_id(request, book_id):
     book = Book.objects.get(pk=book_id)

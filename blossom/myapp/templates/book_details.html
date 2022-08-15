@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blossom</title>
-  </head>
-  <body>
-    <p>Book: {{ book.title}}</p>
-    <p>Published on: {{ book.pub_date}}</p>
-    <a href="http://127.0.0.1:8000/plants">This should be the plants</a>
-    <!-- Not sure how much I can do a regular thing. Also, is jinja being used or is it something else?
+{% extends 'base.html' %} {% block content %}
+
+<p>This is not the header This is for making plants</p>
+
+<p>Book: {{ book.title}}</p>
+<p>Published on: {{ book.pub_date}}</p>
+<a href="http://127.0.0.1:8000/plants">This should be the plants</a>
+<!-- Not sure how much I can do a regular thing. Also, is jinja being used or is it something else?
 
 I really want to use django for more. I shall. Soon enough. -->
-  </body>
-</html>
+
+{% endblock %}
