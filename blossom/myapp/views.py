@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
-from .models import Book
+from .models import Book, Plant
 
 
 
@@ -14,7 +14,9 @@ def book_by_id(request, book_id):
     return render(request, 'book_details.html', {'book':book})
 
 def plants_homepage(request):
-    return render(request, 'plants.html')
+    plant = Plant.objects.get(pk=1)
+    plants = Plant.objects.all()
+    return render(request, 'plants.html', {'plant':plant, 'plants':plants})
 
 def create_plant(request):
     return render(request, 'new_plant.html')
