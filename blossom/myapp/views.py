@@ -19,4 +19,11 @@ def plants_homepage(request):
     return render(request, 'plants.html', {'plant':plant, 'plants':plants})
 
 def create_plant(request):
+
+    # p = Plant(name=, type=, water_ammount=, description=)
+
+    # name = models.CharField(max_length=200)
+    # type = models.CharField(max_length=200)
+    # water_ammount = models.DecimalField(decimal_places=0, max_digits=10)
+    # description = models.CharField(max_length=500)
     return render(request, 'new_plant.html')
