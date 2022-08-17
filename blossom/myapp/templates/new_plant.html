@@ -1,54 +1,53 @@
 {% extends 'base.html' %} {% block content %}
 
-<p>This is for making plants</p>
-
 <!-- <form action="/make-item/" method="post">
     <label for="make-item">Make Plant: </label>
     <input type="text">
 </form> -->
-
-<form action="/your-name/" method="post" style="padding: 2px">
-  <label for="plant_name">Plant name: </label>
-  <br />
-  <input
-    id="your_name"
-    type="text"
-    name="your_name"
-    value="{{ current_name }}"
-    style="margin: 2px"
-  />
-  <br />
-  <label for="your_name">Your name: </label>
-  <br />
-  <input
-    id="your_name"
-    type="text"
-    name="your_name"
-    value="{{ current_name }}"
-    style="margin: 2px"
-  />
-  <br />
-  <label for="your_name">Your name: </label>
-  <br />
-  <input
-    id="your_name"
-    type="text"
-    name="your_name"
-    value="{{ current_name }}"
-    style="margin: 2px"
-  /><br />
-  <label for="your_name">Your name: </label>
-  <br />
-  <input
-    id="your_name"
-    type="text"
-    name="your_name"
-    value="{{ current_name }}"
-    style="margin: 2px"
-  />
-  <input type="submit" value="OK" />
-</form>
-<p></p>
-<a href="http://127.0.0.1:8000/book/1">This should be a book</a>
+<section class="col-xs-1 text-center" style="display: flex; ">
+  <div class="card" style="width: 18rem; padding: 10px">
+    <form action="/your-name/" method="post" style="padding: 2px">
+      <label for="plant_name">Plant name: </label>
+      <br />
+      <input
+        id="your_name"
+        type="text"
+        name="your_name"
+        value="{{ current_name }}"
+        style="margin: 2px"
+      />
+      <br />
+      <label for="your_name">Your name: </label>
+      <br />
+      <input
+        id="your_name"
+        type="text"
+        name="your_name"
+        value="{{ current_name }}"
+        style="margin: 2px"
+      />
+      <br />
+      <label for="your_name">Your name: </label>
+      <br />
+      <input
+        id="your_name"
+        type="text"
+        name="your_name"
+        value="{{ current_name }}"
+        style="margin: 2px"
+      /><br />
+      <label for="your_name">Your name: </label>
+      <br />
+      <input
+        id="your_name"
+        type="text"
+        name="your_name"
+        value="{{ current_name }}"
+        style="margin: 2px"
+      />
+      <input type="submit" value="OK" />
+    </form>
+  </div>
+</section>
 
 {% endblock %}

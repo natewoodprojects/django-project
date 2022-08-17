@@ -1,26 +1,9 @@
-{% extends 'base.html' %} {% block content %}
-
-<p>This is Blossom</p>
-<p>This is a website for Jess</p>
-<a href="http://127.0.0.1:8000/book/1">This should be a book</a>
-
-<a href="http://127.0.0.1:8000/create">This should be the creation</a>
-
-<p>{{ plant.name }}</p>
-
-{% for x in plants %}
-<p>{{ x.name }}</p>
-<p>{{ x.type }}</p>
-<p>Water amount: {{ x.water_ammount }}</p>
-<p>{{ x.description }}</p>
-<p>----------------------</p>
-
-{% endfor %}
-
-<img
-  src="https://drive.google.com/file/d/1CSaZC1d_JUXprITJRhTnbWPCeM16KWEO/view?usp=sharing"
-  alt="plant"
-/>
+{% extends 'base.html' %} {% block content %} {% for x in plants %}
+<div class="card" style="width: 18rem; padding: 10px">
+  <p>{{ x.name }}</p>
+  <p>{{ x.type }}</p>
+  <p>Water amount: {{ x.water_ammount }}</p>
+  <p>{{ x.description }}</p>
+</div>
 <br />
-
-{% endblock %}
+{% endfor %} {% endblock %}

@@ -26,4 +26,8 @@ def create_plant(request):
     # type = models.CharField(max_length=200)
     # water_ammount = models.DecimalField(decimal_places=0, max_digits=10)
     # description = models.CharField(max_length=500)
+
+    # b = Book(title=, pub_date=)
+
+
     return render(request, 'new_plant.html')

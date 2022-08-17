@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body style="background-image: url('/static/wallpaper.webp')">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#" style="padding: 10px"
         ><img
@@ -26,6 +26,8 @@
         />
         Blossom</a
       >
+      <a class="nav-item" href="http://127.0.0.1:8000/plants">My Plants</a>
+      <a class="nav-item" href="http://127.0.0.1:8000/create">Make Plants</a>
     </nav>
     <div style="padding: 10px">{% block content %} {% endblock %}</div>
     <!-- JavaScript Bundle with Popper -->
