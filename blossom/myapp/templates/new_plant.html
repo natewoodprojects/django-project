@@ -4,48 +4,98 @@
     <label for="make-item">Make Plant: </label>
     <input type="text">
 </form> -->
-<section class="col-xs-1 text-center" style="display: flex; ">
-  <div class="card" style="width: 18rem; padding: 10px">
+<section
+  class="col-xs-1 text-center"
+  style="display: flex; justify-content: center"
+>
+  <div
+    class="card"
+    style="width: 500px; padding: 10px; display: flex; justify-content: left"
+  >
     <form action="/your-name/" method="post" style="padding: 2px">
       <label for="plant_name">Plant name: </label>
-      <br />
       <input
-        id="your_name"
+        id="plant_name"
         type="text"
-        name="your_name"
+        name="plant_name"
         value="{{ current_name }}"
         style="margin: 2px"
       />
       <br />
-      <label for="your_name">Your name: </label>
-      <br />
+      <label for="type">Plant Type: </label>
       <input
-        id="your_name"
+        id="type"
         type="text"
-        name="your_name"
-        value="{{ current_name }}"
+        name="type"
+        value="{{ current_type }}"
         style="margin: 2px"
       />
+      <label for="light">Level of Light: </label>
+      <select name="light" id="light">
+        <option value="" disabled selected>Select your option</option>
+        <option value="Direct light">Direct light</option>
+        <option value="Bright indirect light">Bright indirect light</option>
+        <option value="Medium light">Medium light</option>
+        <option value="Low light">Low Light</option>
+      </select>
       <br />
-      <label for="your_name">Your name: </label>
+      <label for="water">Watering: </label>
+      <select name="water" id="water">
+        <option value="" disabled selected>Select your option</option>
+        <option value="Let top layer of soil dry between waterings">
+          Let top layer of soil dry between waterings
+        </option>
+        <option value="Let soil dry completely between waterings">
+          Let soil dry completely between waterings
+        </option>
+        <option value="Keep soil moist">Keep soil moist</option>
+      </select>
       <br />
+      <label for="humidity">Humidity: </label>
+      <select name="humidity" id="humidity">
+        <option value="" disabled selected>Select your option</option>
+        <option value="High">High</option>
+        <option value="Average">Average</option>
+        <option value="Dry">Dry</option>
+      </select>
+      <label for="soil">Type of Soil: </label> <br />
+      <select name="soil" id="soil">
+        <option value="" disabled selected>Select your option</option>
+        <option value="All-purpose potting mix">All-purpose potting mix</option>
+        <option value="Succulent/cactus mix">Succulent/cactus mix</option>
+        <option value="Tropical potting mix">Tropical potting mix</option>
+        <option value="Aroid soilless potting mix">
+          Aroid soilless potting mix
+        </option>
+        <option value="Orchid bark">Orchid bark</option>
+        <option value="Perlite/vermiculite">Perlite/vermiculite</option>
+        <option value="Coconut coir/peat moss">Coconut coir/peat moss</option>
+        <option value="Sphagnum moss">Sphagnum moss</option>
+        <option value="LECA">LECA</option>
+        <option value="Other/custom blend (see notes)">
+          Other/custom blend (see notes)
+        </option>
+      </select>
+      <label for="fertilizer">Fertilizer to Use: </label>
       <input
-        id="your_name"
+        id="fertilizer"
         type="text"
-        name="your_name"
-        value="{{ current_name }}"
-        style="margin: 2px"
-      /><br />
-      <label for="your_name">Your name: </label>
-      <br />
-      <input
-        id="your_name"
-        type="text"
-        name="your_name"
-        value="{{ current_name }}"
+        name="fertilizer"
+        value="{{ current_notes }}"
         style="margin: 2px"
       />
-      <input type="submit" value="OK" />
+      <label for="toxcicity">Toxcicity: </label>
+      <input type="checkbox" id="toxcicity" name="toxcicity" value="Bike" />
+      <label for="notes">Additional Notes: </label>
+      <input
+        id="notes"
+        type="text"
+        name="notes"
+        value="{{ current_notes }}"
+        style="margin: 2px"
+      />
+      <input type="submit" value="Submit" />
+      <!-- name type light water humidity soil fertilizer toxcicity notes -->
     </form>
   </div>
 </section>
