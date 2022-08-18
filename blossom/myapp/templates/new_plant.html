@@ -12,7 +12,7 @@
     class="card"
     style="width: 500px; padding: 10px; display: flex; justify-content: left"
   >
-    <form action="/your-name/" method="post" style="padding: 2px">
+    <form action="/create/" method="post" style="padding: 2px">
       <label for="plant_name">Plant name: </label>
       <input
         id="plant_name"
@@ -30,6 +30,7 @@
         value="{{ current_type }}"
         style="margin: 2px"
       />
+      <br />
       <label for="light">Level of Light: </label>
       <select name="light" id="light">
         <option value="" disabled selected>Select your option</option>
@@ -58,6 +59,7 @@
         <option value="Average">Average</option>
         <option value="Dry">Dry</option>
       </select>
+      <br />
       <label for="soil">Type of Soil: </label> <br />
       <select name="soil" id="soil">
         <option value="" disabled selected>Select your option</option>
