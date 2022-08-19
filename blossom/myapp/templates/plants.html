@@ -6,4 +6,15 @@
   <p>{{ x.description }}</p>
 </div>
 <br />
-{% endfor %} {% endblock %}
+{% endfor %} {% for x in full_plant %}
+<div class="card" style="width: 18rem; padding: 10px">
+  <p>This is {{ x.name }}</p>
+  <p>{{ x.name }} is a {{ x.type }}</p>
+  <p>Brightness: {{ x.light }}</p>
+  <p>How Humid? {{ x.humidity }}</p>
+  <p>Toxic? {{ x.toxcicity }}</p>
+  <p>Water amount: {{ x.water }}</p>
+  <p>{{ x.notes }}</p>
+</div>
+<br />
+{% endfor %}{% endblock %}

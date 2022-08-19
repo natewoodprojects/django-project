@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 from django.http import HttpResponse, HttpResponseRedirect
 
-from .models import Book, Plant
+from .models import Book, Plant, Plants
 
 from .forms import PlantForm
 
@@ -18,7 +18,9 @@ def book_by_id(request, book_id):
 def plants_homepage(request):
     plant = Plant.objects.get(pk=1)
     plants = Plant.objects.all()
-    return render(request, 'plants.html', {'plant':plant, 'plants':plants})
+    full_plant = Plants.objects.all()
+    
+    return render(request, 'plants.html', {"full_plant": full_plant,'plant':plant, 'plants':plants})
 
 def create_plant(request):
     form = PlantForm(request.POST)
