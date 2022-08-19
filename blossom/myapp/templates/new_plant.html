@@ -101,5 +101,13 @@
     </form>
   </div>
 </section>
-
+<div
+  class="card"
+  style="width: 500px; padding: 10px; display: flex; justify-content: left"
+>
+  <form action="/your-name/" method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <input type="submit" value="Submit" />
+  </form>
+</div>
 {% endblock %}

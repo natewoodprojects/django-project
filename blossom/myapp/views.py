@@ -1,8 +1,10 @@
 from django.shortcuts import render
 
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 
 from .models import Book, Plant
+
+from .forms import PlantForm
 
 
 
@@ -19,7 +21,12 @@ def plants_homepage(request):
     return render(request, 'plants.html', {'plant':plant, 'plants':plants})
 
 def create_plant(request):
-
+    form = PlantForm(request.POST)
+    # if request.method == 'POST':
+        
+    #     if form.is_valid():
+    #         print(form)
+    return render(request, "new_plant.html", {'form': form})    
     # p = Plant(name=, type=, water_ammount=, description=)
 
     # name = models.CharField(max_length=200)
@@ -29,5 +36,3 @@ def create_plant(request):
 
     # b = Book(title=, pub_date=)
 
-
-    return render(request, 'new_plant.html')
