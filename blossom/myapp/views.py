@@ -23,18 +23,18 @@ def plants_homepage(request):
     return render(request, 'plants.html', {"full_plant": full_plant,'plant':plant, 'plants':plants})
 
 def create_plant(request):
+    if request.method == 'POST':
+        if form.id_valid():
+            name = form.cleaned_data['name']
+            type = form.cleaned_data['type']
+            light = form.cleaned_data['light']
+            water = form.cleaned_data['water']
+            humidity = form.cleaned_data['humidity']
+            fertilizer = form.cleaned_data['fertilizer']
+            toxcicity = form.cleaned_data['toxcicity']
+            notes = form.cleaned_data['notes']
+            
+            p = Plants(user_id=1, name=name,type=type,light=light, water=water, humidity=humidity, soil=soil, fertilizer=fertilizer,  toxcicity=toxcicity, notes=notes )
+            p.save()
     form = PlantForm(request.POST)
-    # if request.method == 'POST':
-        
-    #     if form.is_valid():
-    #         print(form)
     return render(request, "new_plant.html", {'form': form})    
-    # p = Plant(name=, type=, water_ammount=, description=)
-
-    # name = models.CharField(max_length=200)
-    # type = models.CharField(max_length=200)
-    # water_ammount = models.DecimalField(decimal_places=0, max_digits=10)
-    # description = models.CharField(max_length=500)
-
-    # b = Book(title=, pub_date=)
-
