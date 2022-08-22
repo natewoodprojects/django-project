@@ -24,16 +24,19 @@ def plants_homepage(request):
 
 def create_plant(request):
     if request.method == 'POST':
-        if form.id_valid():
+        form = PlantForm(request.POST)
+        if form.is_valid():
             name = form.cleaned_data['name']
             type = form.cleaned_data['type']
             light = form.cleaned_data['light']
             water = form.cleaned_data['water']
             humidity = form.cleaned_data['humidity']
+            soil = form.cleaned_data['soil']
             fertilizer = form.cleaned_data['fertilizer']
             toxcicity = form.cleaned_data['toxcicity']
             notes = form.cleaned_data['notes']           
             p = Plants(user_id=1, name=name,type=type,light=light, water=water, humidity=humidity, soil=soil, fertilizer=fertilizer,  toxcicity=toxcicity, notes=notes )
             p.save()
+            return HttpResponseRedirect("/plants")
     form = PlantForm(request.POST)
-    return render(request, "new_plant.html", {'form': form})    
+    return render(request, "new_plant.html", {'form': form})
