@@ -32,8 +32,7 @@ def create_plant(request):
             humidity = form.cleaned_data['humidity']
             fertilizer = form.cleaned_data['fertilizer']
             toxcicity = form.cleaned_data['toxcicity']
-            notes = form.cleaned_data['notes']
-            
+            notes = form.cleaned_data['notes']           
             p = Plants(user_id=1, name=name,type=type,light=light, water=water, humidity=humidity, soil=soil, fertilizer=fertilizer,  toxcicity=toxcicity, notes=notes )
             p.save()
     form = PlantForm(request.POST)
