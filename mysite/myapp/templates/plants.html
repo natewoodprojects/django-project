@@ -1,9 +1,0 @@
-{% extends 'base.html' %} {% block content %} {% for x in plants %}
-<div class="card" style="width: 18rem; padding: 10px">
-  <p>{{ x.name }}</p>
-  <p>{{ x.type }}</p>
-  <p>Water amount: {{ x.water_ammount }}</p>
-  <p>{{ x.description }}</p>
-</div>
-<br />
-{% endfor %} {% endblock %}
