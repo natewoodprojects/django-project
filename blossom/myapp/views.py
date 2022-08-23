@@ -33,9 +33,9 @@ def create_plant(request):
             humidity = form.cleaned_data['humidity']
             soil = form.cleaned_data['soil']
             fertilizer = form.cleaned_data['fertilizer']
-            toxcicity = form.cleaned_data['toxcicity']
+            toxicity = form.cleaned_data['toxicity']
             notes = form.cleaned_data['notes']           
-            p = Plants(user_id=1, name=name,type=type,light=light, water=water, humidity=humidity, soil=soil, fertilizer=fertilizer,  toxcicity=toxcicity, notes=notes )
+            p = Plants(user_id=1, name=name,type=type,light=light, water=water, humidity=humidity, soil=soil, fertilizer=fertilizer,  toxcicity=toxicity, notes=notes )
             p.save()
             return HttpResponseRedirect("/plants")
     form = PlantForm(request.POST)

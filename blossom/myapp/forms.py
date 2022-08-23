@@ -48,7 +48,7 @@ class PlantForm(forms.Form):
                            (attrs={
                                'required': 'True'
                             }))    
-    toxcicity = forms.BooleanField(label='Toxcicity', required=False)
+    toxicity = forms.BooleanField(label='Toxicity', required=False)
     notes = forms.CharField(label='Notes', max_length=10000, required=False, widget=forms.TextInput
                            (attrs={
                                'required': 'True'
