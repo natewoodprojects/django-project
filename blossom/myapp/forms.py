@@ -24,21 +24,21 @@ SOIL_CHOICES=[
 
 
 class PlantForm(forms.Form):
-    name = forms.CharField(label='Plant_name', max_length=100, required=False, widget=forms.TextInput
+    name = forms.CharField(label='Plant Name', max_length=100, required=False, widget=forms.TextInput
                            (attrs={
                                'required': 'True'
                             }))
-    type = forms.CharField(label='Type', max_length=200, required=False, widget=forms.TextInput
+    type = forms.CharField(label='Plant Type', max_length=200, required=False, widget=forms.TextInput
                            (attrs={
                                'required': 'True'
                             }))
-    light = forms.CharField(label='Light', max_length=200, required=False, widget=forms.Select(choices=LIGHT_CHOICES, attrs={
+    light = forms.CharField(label='Sunlight needs', max_length=200, required=False, widget=forms.Select(choices=LIGHT_CHOICES, attrs={
                                'required': 'True'
                             }))
-    water = forms.CharField(label='Water', max_length=200, required=False, widget=forms.Select(choices=WATER_CHOICES, attrs={
+    water = forms.CharField(label='Watering', max_length=200, required=False, widget=forms.Select(choices=WATER_CHOICES, attrs={
                                'required': 'True'
                             }))
-    humidity = forms.CharField(label='Humidity', max_length=200, required=False, widget=forms.Select(choices=HUMIDITY_CHOICES, attrs={
+    humidity = forms.CharField(label='Humidity needs', max_length=200, required=False, widget=forms.Select(choices=HUMIDITY_CHOICES, attrs={
                                'required': 'True'
                             }))
     soil = forms.CharField(label='Soil',required=False,  widget=forms.Select(choices=SOIL_CHOICES, attrs={
@@ -48,7 +48,7 @@ class PlantForm(forms.Form):
                            (attrs={
                                'required': 'True'
                             }))    
-    toxicity = forms.BooleanField(label='Toxicity', required=False)
+    toxicity = forms.BooleanField(label='Check box if the plant is toxic', required=False)
     notes = forms.CharField(label='Notes', max_length=10000, required=False, widget=forms.TextInput
                            (attrs={
                                'required': 'True'
